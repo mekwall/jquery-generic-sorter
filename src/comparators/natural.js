@@ -1,8 +1,8 @@
 // Overset Jim Palmer's Natural Sort algorithm
 // http://www.overset.com/2008/09/01/javascript-natural-sort-algorithm-with-unicode-support/
 (function($){
-if (!$.genericSorter.comparators) { return; }
-$.genericSorter.comparators.extend({
+if (!$.genericSorter) { return; }
+$.extend($.genericSorter.comparators, {
     natural: function( extractor ) {
         return function( a, b ){
             a = extractor.call( a ), b = extractor.call( b ); 

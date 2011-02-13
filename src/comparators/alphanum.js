@@ -1,8 +1,8 @@
 // Brian Huisman's version of David Koelle's Alphanum algorithm
 // http://my.opera.com/GreyWyvern/blog/show.dml/1671288
 (function($){
-if (!$.genericSorter.comparators) { return; }
-$.genericSorter.comparators.extend({
+if (!$.genericSorter) { return; }
+$.extend($.genericSorter.comparators, {
     alphanum: function( extractor ) {
         return function( a, b ) {
             a = extractor.call( a ), b = extractor.call( b );
