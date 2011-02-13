@@ -77,6 +77,11 @@ $.genericSorter.comparators = $.extend( {}, $.genericSorter.comparators, {
         return function( a, b ){
             return extractor.call( a ) > extractor.call( b ) ? 1 : -1;
         }
+    },
+    numeric: function( extractor ) {
+        return function( a, b ){
+            return parseFloat( extractor.call( a ) ) > parseFloat( extractor.call( b ) ) ? 1 : -1;
+        }
     }
 });
 
